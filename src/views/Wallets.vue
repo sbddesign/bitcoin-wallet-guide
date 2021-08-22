@@ -53,6 +53,9 @@ export default {
   components: {
     FontAwesomeIcon
   },
+  props: {
+    recommendedData: String,
+  },
   data(){
     return {
       iconLN: faBolt,

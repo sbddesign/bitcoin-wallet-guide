@@ -12,7 +12,6 @@
         <ul class="md:flex md:flex-row md:justify-end md:w-auto">
           <li class="px-4"><router-link to="/about">About</router-link></li>
           <li class="px-4"><router-link to="/wallets">Wallets</router-link></li>
-          <li class="px-4"><router-link :to="recommendedTestLink">Recommendations</router-link></li>
         </ul>
       </nav>
     </div>
