@@ -1,4 +1,14 @@
-# bitcoin-wallet-guide
+# Alice
+
+Alice is your guide to bitcoin wallets. She's a cool person to know.
+
+For [PlebFi Austin Hackathon](https://pleb.fi/austin/)
+
+Keep Austin pleb.
+
+## Goal
+
+Create helpful tool to onboard people to bitcoin payments, either through their own exploration or through the guidance of an app.
 
 ## Project setup
 ```
