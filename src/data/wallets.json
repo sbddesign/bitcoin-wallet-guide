@@ -1,0 +1,26 @@
+[
+  {
+    "name": "wallet1",
+    "title": "Wallet 1",
+    "description": "Bitcoin ipsum dolor sit amet. Peer-to-peer miner Bitcoin Improvement Proposal genesis block digital signature Merkle Tree UTXO. UTXO private key blockchain miner inputs electronic cash, nonce soft fork, decentralized. Halvening peer-to-peer proof-of-work, outputs, wallet Merkle Tree difficulty private key address. Merkle Tree miner SHA-256 wallet full node.",
+    "custodial": false,
+    "purchase_btc": false,
+    "lightning": true
+  },
+  {
+    "name": "wallet2",
+    "title": "Wallet 2",
+    "description": "Digital signature transaction block reward, timestamp server key pair blockchain key pair. Consensus soft fork key pair sats transaction, whitepaper, blocksize! Soft fork key pair, nonce digital signature consensus block height satoshis segwit. Peer-to-peer nonce address mempool mining decentralized double-spend problem blockchain. Satoshis proof-of-work, soft fork?",
+    "custodial": "true",
+    "purchase_btc": true,
+    "lightning": false
+  },
+  {
+    "name": "wallet3",
+    "title": "Wallet 3",
+    "description": "Digital signature transaction block reward, timestamp server key pair blockchain key pair. Consensus soft fork key pair sats transaction, whitepaper, blocksize! Soft fork key pair, nonce digital signature consensus block height satoshis segwit. Peer-to-peer nonce address mempool mining decentralized double-spend problem blockchain. Satoshis proof-of-work, soft fork?",
+    "custodial": "true",
+    "purchase_btc": true,
+    "lightning": true
+  }
+]
