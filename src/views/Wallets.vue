@@ -1,27 +1,27 @@
 <template>
-  <div class="container mx-auto">
+  <div class="container mx-auto max-w-4xl text-left">
     <h1 class="py-4 text-4xl">Bitcoin Wallets</h1>
     <div class="lg:flex lg:flex-row">
       <div
-        class="p-4 filters flex flex-column sm:flex-row items-center justify-center flex-wrap bg-gray-light lg:flex-shrink lg:max-w-2xl lg:w-1/3 lg:items-start lg:content-start lg:justify-start lg:mr-8 lg:flex-row"
+        class="p-8 filters flex flex-column sm:flex-row items-center justify-center flex-wrap bg-gray-light lg:block lg:mr-8"
       >
-        <h2 class="text-2xl w-screen flex-grow lg:w-auto">Filter Wallets</h2>
-        <div class="mx-4 mb-4 sm:mb-0">
+        <h2 class="text-2xl w-screen flex-grow lg:w-auto mb-4">Filter Wallets</h2>
+        <div class="mr-4 mb-4 sm:mb-0">
           <input type="checkbox" id="require_ln" value="require_ln" v-model="filters.require_ln" @change="updateIsChecked" />
           <label for="require_ln" class="ml-2"><font-awesome-icon :icon="iconLN" /> Lightning</label>
         </div>
 
-        <div class="mx-4 mb-4 sm:mb-0">
+        <div class="mr-4 mb-4 sm:mb-0">
           <input type="checkbox" id="require_purchase_btc" value="require_purchase_btc" v-model="filters.require_purchase_btc" @change="updateIsChecked" />
           <label for="require_purchase_btc" class="ml-2">Purchase BTC</label>
         </div>
 
-        <div class="mx-4 mb-4 sm:mb-0">
+        <div class="mr-4 mb-4 sm:mb-0">
           <input type="checkbox" id="require_non_custodial" value="require_non-require_non_custodial" v-model="filters.require_non_custodial" @change="updateIsChecked" />
           <label for="require_non_custodial" class="ml-2">Non-custodial</label>
         </div>
       </div>
-      <div class="wallets lg:flex-grow">
+      <div class="wallets">
         <div
             class="wallet py-8 border-b border-gray text-left"
             v-for="wallet in wallets"
@@ -87,3 +87,12 @@ export default {
   }
 }
 </script>
+
+<style>
+@media(min-width: 1024px) {
+  .filters {
+    min-width: 300px !important;
+  }
+}
+
+</style>
