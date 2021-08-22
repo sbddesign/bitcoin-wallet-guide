@@ -22,6 +22,16 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Wallets.vue')
+  },
+  {
+    path: '/wallets/recommendations/:recommendedData',
+    name: 'Recommendations',
+    component: () => import(/* webpackChunkName: "recommendations" */ '../views/Recommendations.vue'),
+    props: route => {
+      return {
+        recommendedData: route.params.recommendedData
+      }
+    }
   }
 ]
 
