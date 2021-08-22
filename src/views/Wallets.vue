@@ -32,8 +32,8 @@
           <h4 class="my-4 text-xl">Features</h4>
           <p><font-awesome-icon :icon="iconBitcoin" class="mr-2" /> Bitcoin</p>
           <p v-if="!wallet.custodial"><font-awesome-icon :icon="iconNonCustodial" class="mr-2" /> Non-Custodial</p>
-          <p v-if="!wallet.lightning"><font-awesome-icon :icon="iconLN" class="mr-2" />  Instant Lightning Payments</p>
-          <p v-if="!wallet.purchase_btc"><font-awesome-icon :icon="iconPurchase" class="mr-2" /> Bitcoin Purchases</p>
+          <p v-if="wallet.lightning"><font-awesome-icon :icon="iconLN" class="mr-2" />  Instant Lightning Payments</p>
+          <p v-if="wallet.purchase_btc"><font-awesome-icon :icon="iconPurchase" class="mr-2" /> Bitcoin Purchases</p>
         </div>
       </div>
     </div>
