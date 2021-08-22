@@ -8,6 +8,8 @@ For [PlebFi Austin Hackathon](https://pleb.fi/austin/)
 
 Keep Austin pleb.
 
+[See Prototype](https://alice-bitcoin.netlify.app/)
+
 [See Figma File](https://www.figma.com/file/Ba2hYmkPj7gS4Ej1k71hjv/Bitcoin-Wallet-Guide?node-id=0%3A1) (which is a work-in-progress, obviously)
 
 ## Goal
@@ -36,6 +38,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+## Credits
+Thanks to [Pablo Stanley](https://www.openpeeps.com/) for the open illustration.
 
 ## Hackathon Notes
 
