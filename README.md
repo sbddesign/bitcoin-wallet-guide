@@ -1,5 +1,7 @@
 # Alice
 
+![Alice character](alice-hero-image.png)
+
 Alice is your guide to bitcoin wallets. She's a cool person to know.
 
 For [PlebFi Austin Hackathon](https://pleb.fi/austin/)
