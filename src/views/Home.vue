@@ -1,5 +1,5 @@
 <template>
-  <div class="py-8 md:py-32 lg:px-32">
+  <div class="container py-8 md:py-32 lg:px-32">
     <img
         alt="Illustration Alice"
         src="../assets/alice-logo_extra-large-with-tagline.svg"
