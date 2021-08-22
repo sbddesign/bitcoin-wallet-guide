@@ -38,6 +38,7 @@ const routes = [
     name: 'Questions',
     component: () => import(/* webpackChunkName: "recommendations" */ '../views/Question.vue'),
     props: route => {
+      console.log(this)
       return {
         questionName: route.params.question
       }

@@ -1,23 +1,40 @@
 <template>
-  <div class="about">
-    <h1>Wallets</h1>
-    <div class="filters">
-      <label>Lightning</label>
-      <input type="checkbox" value="require_ln" v-model="filters.require_ln" @change="updateIsChecked" />
+  <div class="container mx-auto">
+    <h1 class="py-4 text-4xl">Bitcoin Wallets</h1>
+    <div class="lg:flex lg:flex-row">
+      <div
+        class="p-4 filters flex flex-column sm:flex-row items-center justify-center flex-wrap bg-gray-light lg:flex-shrink lg:max-w-2xl lg:w-1/3 lg:items-start lg:content-start lg:justify-start lg:mr-8 lg:flex-row"
+      >
+        <h2 class="text-2xl w-screen flex-grow lg:w-auto">Filter Wallets</h2>
+        <div class="mx-4 mb-4 sm:mb-0">
+          <input type="checkbox" id="require_ln" value="require_ln" v-model="filters.require_ln" @change="updateIsChecked" />
+          <label for="require_ln" class="ml-2"><font-awesome-icon :icon="iconLN" /> Lightning</label>
+        </div>
 
-      <label>Purchase BTC</label>
-      <input type="checkbox" value="require_purchase_btc" v-model="filters.require_purchase_btc" @change="updateIsChecked" />
+        <div class="mx-4 mb-4 sm:mb-0">
+          <input type="checkbox" id="require_purchase_btc" value="require_purchase_btc" v-model="filters.require_purchase_btc" @change="updateIsChecked" />
+          <label for="require_purchase_btc" class="ml-2">Purchase BTC</label>
+        </div>
 
-      <label>Non-custodial</label>
-      <input type="checkbox" value="require_non-require_non_custodial" v-model="filters.require_non_custodial" @change="updateIsChecked" />
-    </div>
-    <div class="wallets">
-      <div class="wallet" v-for="wallet in wallets" v-bind:key="wallet.name">
-        <h2>{{wallet.title}}</h2>
-        <p>{{wallet.description}}</p>
-        <p>Non-Custodial = {{!wallet.custodial}}</p>
-        <p>Lightning = {{wallet.lightning}}</p>
-        <p>Bitcoin Purchases = {{wallet.purchase_btc}}</p>
+        <div class="mx-4 mb-4 sm:mb-0">
+          <input type="checkbox" id="require_non_custodial" value="require_non-require_non_custodial" v-model="filters.require_non_custodial" @change="updateIsChecked" />
+          <label for="require_non_custodial" class="ml-2">Non-custodial</label>
+        </div>
+      </div>
+      <div class="wallets lg:flex-grow">
+        <div
+            class="wallet py-8 border-b border-gray text-left"
+            v-for="wallet in wallets"
+            v-bind:key="wallet.name"
+        >
+          <h3 class="text-2xl my-4">{{wallet.title}}</h3>
+          <p>{{wallet.description}}</p>
+          <h4 class="my-4 text-xl">Features</h4>
+          <p><font-awesome-icon :icon="iconBitcoin" class="mr-2" /> Bitcoin</p>
+          <p v-if="!wallet.custodial"><font-awesome-icon :icon="iconNonCustodial" class="mr-2" /> Non-Custodial</p>
+          <p v-if="!wallet.lightning"><font-awesome-icon :icon="iconLN" class="mr-2" />  Instant Lightning Payments</p>
+          <p v-if="!wallet.purchase_btc"><font-awesome-icon :icon="iconPurchase" class="mr-2" /> Bitcoin Purchases</p>
+        </div>
       </div>
     </div>
   </div>
@@ -25,11 +42,23 @@
 
 <script>
 import Wallets from '../data/wallets.json'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faBolt } from '@fortawesome/free-solid-svg-icons'
+import { faBitcoin } from '@fortawesome/free-brands-svg-icons'
+import { faKey } from '@fortawesome/free-solid-svg-icons'
+import { faMoneyBill } from '@fortawesome/free-solid-svg-icons'
 
 export default {
   name: 'Wallets',
+  components: {
+    FontAwesomeIcon
+  },
   data(){
     return {
+      iconLN: faBolt,
+      iconBitcoin: faBitcoin,
+      iconNonCustodial: faKey,
+      iconPurchase: faMoneyBill,
       filters: {
         require_ln: false,
         require_purchase_btc: false,

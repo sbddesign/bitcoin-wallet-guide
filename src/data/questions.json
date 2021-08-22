@@ -26,11 +26,47 @@
     "options": [
       {
         "value": "yes",
-        "answer": "Yes."
+        "answer": "Yes"
       },
       {
         "value": "no",
-        "answer": "No."
+        "answer": "No"
+      }
+    ],
+    "next": "how-do-you-see-yourself-using-bitcoin"
+  },
+  {
+    "name": "how-do-you-see-yourself-using-bitcoin",
+    "question": "How do you see yourself using bitcoin?",
+    "type": "radio",
+    "options": [
+      {
+        "value": "savings",
+        "answer": "I would like to start saving with bitcoin."
+      },
+      {
+        "value": "payments",
+        "answer": "I would like to pay people with bitcoin."
+      }
+    ],
+    "next": "which-of-these-concerns-you-the-most"
+  },
+  {
+    "name": "which-of-these-concerns-you-the-most",
+    "question": "Which of these concerns you the most?",
+    "type": "radio",
+    "options": [
+      {
+        "value": "security",
+        "answer": "Security - I want to keep my bitcoin secure"
+      },
+      {
+        "value": "censorship",
+        "answer": "Censorship - I do not want to be told who I can pay"
+      },
+      {
+        "value": "confiscation",
+        "answer": "Confiscation - I do not want my funds to be seized by a trusted third party"
       }
     ],
     "next": ""
