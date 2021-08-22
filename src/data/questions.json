@@ -1,0 +1,38 @@
+[
+  {
+    "name": "how-familiar-are-you-with-bitcoin",
+    "question": "How familiar are you with Bitcoin?",
+    "type": "radio",
+    "options": [
+      {
+        "value": "brand-new",
+        "answer": "I'm brand new to Bitcoin."
+      },
+      {
+        "value": "somewhat-familiar",
+        "answer": "I'm already familiar with bitcoin, but I'm looking to learn more."
+      },
+      {
+        "value": "experienced",
+        "answer": "I'm very experienced with Bitcoin."
+      }
+    ],
+    "next": "do-you-own-bitcoin"
+  },
+  {
+    "name": "do-you-own-bitcoin",
+    "question": "Do you already own any bitcoin?",
+    "type": "radio",
+    "options": [
+      {
+        "value": "yes",
+        "answer": "Yes."
+      },
+      {
+        "value": "no",
+        "answer": "No."
+      }
+    ],
+    "next": ""
+  }
+]

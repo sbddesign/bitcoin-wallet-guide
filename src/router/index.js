@@ -32,6 +32,16 @@ const routes = [
         recommendedData: route.params.recommendedData
       }
     }
+  },
+  {
+    path: '/question/:question',
+    name: 'Questions',
+    component: () => import(/* webpackChunkName: "recommendations" */ '../views/Question.vue'),
+    props: route => {
+      return {
+        questionName: route.params.question
+      }
+    }
   }
 ]
 
