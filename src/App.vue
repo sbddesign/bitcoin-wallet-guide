@@ -1,11 +1,8 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/wallets">Wallets</router-link> |
-    <router-link :to="recommendedTestLink">Recommendations</router-link>
+  <Header :recommended-test-link="recommendedTestLink" />
+  <div class="container mx-auto px-4">
+    <router-view/>
   </div>
-  <router-view/>
 </template>
 
 <style>
@@ -32,8 +29,13 @@
 </style>
 
 <script>
+import Header from './components/Header';
+
 export default {
   name: 'Wallets',
+  components: {
+    Header
+  },
   data(){
     return {
       recommendedTestLink: "",
